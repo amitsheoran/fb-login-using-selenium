@@ -1,0 +1,44 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FacebookLogin 
+{
+  public static void main(String[] args) 
+  {
+    
+    // Create a new Chrome driver
+    WebDriver driver = new ChromeDriver();
+
+    // To Maximize the window
+    driver.manage().window().maximize();
+
+
+    // Navigate to the Facebook login page
+    driver.get("https://www.facebook.com/login");
+
+    // To Check Correct Title of the Webpage
+    String expectedTitle = "Facebook";
+      String actualTitle = driver.getTitle();
+
+           // compare the expected title of the page with the actual title of the page and print the result
+          if (expectedTitle.equals(actualTitle))
+               { System.out.println("Verification Successful - The correct title is displayed on the web page."); 
+               }
+          else { System.out.println("Verification Failed - An incorrect title is displayed on the web page."); 
+               }
+          Thread.sleep(1000);
+
+    // Find the email field and enter your email address
+    driver.findElement(By.id("email")).sendKeys("your@email.com");
+
+    // Find the password field and enter your password
+    driver.findElement(By.id("pass")).sendKeys("yourpassword");
+
+    // Find the login button and click it
+    driver.findElement(By.id("loginbutton")).click();
+
+    // To Close the Browser
+    driver.close();
+  }
+}
