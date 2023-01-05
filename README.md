@@ -13,14 +13,19 @@ Here are the steps to download Selenium using the command prompt and Maven:
 2. Navigate to your project directory.
 3. Add the Selenium dependency to your pom.xml file:
 
+```java
 <dependency>
   <groupId>org.seleniumhq.selenium</groupId>
   <artifactId>selenium-java</artifactId>
   <version>3.141.59</version>
 </dependency>
+```
 
 4. Run the following command to download and install Selenium and its dependencies:
+
+```java
 mvn clean install
+```
 
 This will download and install Selenium and its dependencies in your project.
 
@@ -30,17 +35,20 @@ Here are the steps to download Selenium using the command prompt and Gradle:
 2. Navigate to your project directory.
 3. Add the Selenium dependency to your build.gradle file:
 
+```java
 dependencies {
   compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
 }
+```
 
 4. Run the following command to download and install Selenium and its dependencies:
 
+```java
 gradle clean build
+```
 
 This will download and install Selenium and its dependencies in your project.
 
-`this is some code`
 
 
 
